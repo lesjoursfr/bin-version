@@ -1,27 +1,42 @@
 {
-	"name": "bin-version",
+	"name": "@lesjoursfr/bin-version",
 	"version": "6.0.0",
 	"description": "Get the version of a binary in semver format",
 	"license": "MIT",
-	"repository": "sindresorhus/bin-version",
-	"funding": "https://github.com/sponsors/sindresorhus",
+	"repository": {
+		"url": "git+https://github.com/lesjoursfr/bin-version.git"
+	},
+	"homepage": "https://github.com/lesjoursfr/bin-version#readme",
+	"bugs": {
+		"url": "https://github.com/lesjoursfr/bin-version/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
-	"type": "module",
-	"exports": "./index.js",
 	"engines": {
-		"node": ">=12"
+		"node": "18.x || 20.x"
 	},
-	"scripts": {
-		"test": "xo && ava && tsd"
-	},
+	"exports": "./lib/index.js",
+	"types": "./lib/index.d.ts",
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"lib/**/*",
+		"src/**/*"
 	],
+	"scripts": {
+		"freshlock": "rm -rf node_modules/ && rm .yarn/install-state.gz && rm -r .yarn/cache/ && rm yarn.lock && yarn",
+		"check-lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+		"check-format": "prettier --check \"**/*.{ts,js,cjs,mjs,json,yml,md}\"",
+		"check-tsc": "tsc --noEmit",
+		"lint": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+		"format": "prettier --write \"**/*.{ts,js,cjs,mjs,json,yml,md}\"",
+		"build": "tsc",
+		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
+	},
 	"keywords": [
 		"binary",
 		"executable",
@@ -30,13 +45,23 @@
 		"semantic",
 		"cli"
 	],
+	"type": "module",
 	"dependencies": {
-		"execa": "^5.0.0",
-		"find-versions": "^5.0.0"
+		"execa": "^7.2.0",
+		"find-versions": "^5.1.0"
 	},
 	"devDependencies": {
-		"ava": "^3.15.0",
-		"tsd": "^0.14.0",
-		"xo": "^0.39.1"
-	}
+		"@tsconfig/node18": "^18.2.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "^20.4.8",
+		"@typescript-eslint/eslint-plugin": "^6.2.1",
+		"@typescript-eslint/parser": "^6.2.1",
+		"eslint": "^8.46.0",
+		"eslint-config-prettier": "^9.0.0",
+		"mocha": "^10.2.0",
+		"prettier": "^3.0.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6"
+	},
+	"packageManager": "yarn@3.6.1"
 }

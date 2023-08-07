@@ -1,48 +1,52 @@
+[![npm version](https://badge.fury.io/js/@lesjoursfr%2Fbin-version.svg)](https://badge.fury.io/js/@lesjoursfr%2Fbin-version)
+[![QC Checks](https://github.com/lesjoursfr/bin-version/actions/workflows/quality-control.yml/badge.svg)](https://github.com/lesjoursfr/bin-version/actions/workflows/quality-control.yml)
+[![Tests](https://github.com/lesjoursfr/bin-version/actions/workflows/tests.yml/badge.svg)](https://github.com/lesjoursfr/bin-version/actions/workflows/tests.yml)
+
 # bin-version
 
-> Get the version of a binary in [semver](https://github.com/npm/node-semver) format
+Get the version of a binary in [semver](https://github.com/npm/node-semver) format
 
 ## Install
 
-```
-$ npm install bin-version
+```sh
+npm install @lesjoursfr/bin-version
 ```
 
 ## Usage
 
-```
-$ curl --version
+```sh
+curl --version
 curl 7.30.0 (x86_64-apple-darwin13.0)
 ```
 
 ```js
-import binaryVersion from 'bin-version';
+import binaryVersion from "@lesjoursfr/bin-version";
 
-console.log(await binaryVersion('curl'));
+console.log(await binaryVersion("curl"));
 //=> '7.30.0'
 ```
 
-```
-$ openssl version
+```sh
+openssl version
 OpenSSL 1.0.2d 9 Jul 2015
 ```
 
 ```js
-import binaryVersion from 'bin-version';
+import binaryVersion from "@lesjoursfr/bin-version";
 
-console.log(await binaryVersion('openssl'));
+console.log(await binaryVersion("openssl"));
 //=> '1.0.2'
 ```
 
-```
-$ openssl version
+```sh
+openssl version
 OpenSSL 1.0.2d 9 Jul 2015
 ```
 
 ```js
-import binaryVersion from 'bin-version';
+import binaryVersion from "@lesjoursfr/bin-version";
 
-console.log(await binaryVersion('openssl', {args: ['version']}));
+console.log(await binaryVersion("openssl", { args: ["version"] }));
 //=> '1.0.2'
 ```
 
@@ -72,5 +76,4 @@ If not specified, predefined arguments will be used for known binaries, or `['--
 
 ## Related
 
-- [bin-version-cli](https://github.com/sindresorhus/bin-version-cli) - CLI for this module
-- [find-versions](https://github.com/sindresorhus/find-versions) - Find semver versions in a string
+-   [find-versions](https://github.com/sindresorhus/find-versions) - Find semver versions in a string
