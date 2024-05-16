@@ -48,7 +48,7 @@
 	"type": "module",
 	"dependencies": {
 		"execa": "^8.0.1",
-		"find-versions": "^5.1.0"
+		"find-versions": "^6.0.0"
 	},
 	"devDependencies": {
 		"@tsconfig/node18": "^18.2.4",
