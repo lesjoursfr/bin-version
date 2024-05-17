@@ -30,6 +30,7 @@ export default async function binaryVersion(binary: string, options: BinaryVersi
     try {
       const { all } = await execa(binary, args, {
         all: true,
+        encoding: "utf8",
         maxBuffer: oneMegabyte,
       });
 

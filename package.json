@@ -47,7 +47,7 @@
 	],
 	"type": "module",
 	"dependencies": {
-		"execa": "^8.0.1",
+		"execa": "^9.1.0",
 		"find-versions": "^6.0.0"
 	},
 	"devDependencies": {
