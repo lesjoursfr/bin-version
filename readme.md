@@ -76,4 +76,4 @@ If not specified, predefined arguments will be used for known binaries, or `['--
 
 ## Related
 
--   [find-versions](https://github.com/sindresorhus/find-versions) - Find semver versions in a string
+- [find-versions](https://github.com/sindresorhus/find-versions) - Find semver versions in a string
