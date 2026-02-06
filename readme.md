@@ -1,6 +1,5 @@
 [![npm version](https://badge.fury.io/js/@lesjoursfr%2Fbin-version.svg)](https://badge.fury.io/js/@lesjoursfr%2Fbin-version)
 [![QC Checks](https://github.com/lesjoursfr/bin-version/actions/workflows/quality-control.yml/badge.svg)](https://github.com/lesjoursfr/bin-version/actions/workflows/quality-control.yml)
-[![Tests](https://github.com/lesjoursfr/bin-version/actions/workflows/tests.yml/badge.svg)](https://github.com/lesjoursfr/bin-version/actions/workflows/tests.yml)
 
 # bin-version
 
