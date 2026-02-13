@@ -1,6 +1,6 @@
 {
 	"name": "@lesjoursfr/bin-version",
-	"version": "8.0.3",
+	"version": "8.0.4",
 	"description": "Get the version of a binary in semver format",
 	"license": "MIT",
 	"repository": {
