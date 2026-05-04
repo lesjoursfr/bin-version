@@ -4,6 +4,7 @@
 	"description": "Get the version of a binary in semver format",
 	"license": "MIT",
 	"repository": {
+		"type": "git",
 		"url": "git+https://github.com/lesjoursfr/bin-version.git"
 	},
 	"homepage": "https://github.com/lesjoursfr/bin-version#readme",
@@ -21,12 +22,17 @@
 	"engines": {
 		"node": "22.x || 24.x"
 	},
-	"exports": "./lib/index.js",
-	"types": "./lib/index.d.ts",
-	"files": [
-		"lib/**/*",
-		"src/**/*"
+	"keywords": [
+		"binary",
+		"executable",
+		"version",
+		"semver",
+		"semantic",
+		"cli"
 	],
+	"main": "./lib/index.js",
+	"types": "./lib/index.d.ts",
+	"type": "module",
 	"scripts": {
 		"freshlock": "rm -rf node_modules/ && rm .yarn/install-state.gz && rm yarn.lock && yarn",
 		"check-lint": "eslint",
@@ -37,15 +43,6 @@
 		"build": "tsc",
 		"test": "NODE_OPTIONS='--loader=ts-node/esm' mocha"
 	},
-	"keywords": [
-		"binary",
-		"executable",
-		"version",
-		"semver",
-		"semantic",
-		"cli"
-	],
-	"type": "module",
 	"dependencies": {
 		"execa": "^9.6.1",
 		"find-versions": "^6.0.0"
